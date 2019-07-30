@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <!-- Variables, that you can use throughout the site. -->
+    {VARIABLE|set=Carlo Mezzanotte:site_name}
+    <!--
+    index.html
+    This file (index.html) serves as a main skeleton for all the site's pages.
+    Its structure is not pre-defined or bound to any special rule.
+    -->
+    <html lang="[LANGUAGE]">
+    <!-- Headers -->
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Add site "theme-color" for mobile browser tabs. -->
+        <meta name="theme-color" content="#ffffff">
+        <!-- Import CSS, JS files from the platform and its modules. -->
+        [META_DATA]
+        [CSS|runlast]
+        [CSS|runlast|external|refresh:/assets/css/style.css?[DOCTOR_TIMESTAMP]]
+        <title>[TITLE] - {VARIABLE:site_name}</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Sedgwick+Ave+Display|Walter+Turncoat');
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|Julius+Sans+One|Sarala|Spinnaker" rel="stylesheet">
+
+    </head>
+
+    <!-- Body -->
+    <body class="grid grid-gap-0 [BODY_CLASSES]">
+    {VARIABLE|set=grid-start-lg-2 grid-span-lg-10 grid-start-xxl-4 grid-span-xxl-6:layout_main}
+    {VARIABLE|set=grid-start-lg-3 grid-span-lg-8 grid-start-xxl-5 grid-span-xxl-4:layout_small}
+    [CONTENT|class=admin-bar|filter=user_role@admin:_adminbar]
+        <!-- Display messages (if any) -->
+        [MESSAGES]
+        [GRID|grid=layout-main {VARIABLE:layout_main}:
+            <!-- Site's header -->
+            [HEADER|class=align-self-start|id=header:_header]
+            <!-- Currently viewed node's content -->
+            [MAIN|id=grid-main]
+            [FOOTER|id=footer:_footer]
+        ]
+
+        [JS|runlast]
+    </body>
+</html>
