@@ -32,12 +32,8 @@
     [CONTENT|class=admin-bar|filter=user_role@admin:_adminbar]
         <!-- Display messages (if any) -->
         [MESSAGES]
-        [GRID|grid=layout-main {VARIABLE:layout_main}:
-            <!-- Site's header -->
-            [HEADER|class=align-self-start|id=header:_header]
-            <!-- Currently viewed node's content -->
-            [MAIN|id=grid-main]
-            [FOOTER|id=footer:_footer]
+        [HTML_TAG|grid=layout-main {VARIABLE:layout_main}:
+            [HEADER|class=align-self-start|id=header:_header][MAIN|id=grid-main][FOOTER|id=footer:_footer]
         ]
 
         [JS|runlast]
