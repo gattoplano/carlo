@@ -205,7 +205,6 @@ body, header, footer, main, .logo-title {
 }
 
 .layout-main {
-    max-width: 800px;
     margin: auto;
     padding: 8px;
 }
@@ -214,5 +213,4 @@ body, header, footer, main, .logo-title {
 }
 
 body {
-    background: #137;
 }
