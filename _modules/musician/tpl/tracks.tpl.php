@@ -1,0 +1,1 @@
+[TRACK:[LISTITEM]] [EDIT|components=node_form,node_edit,file_form,weight_form:[LISTITEM]][DELETE:[LISTITEM]]
