@@ -16,7 +16,6 @@ class Records extends Qtag {
     $this->attributes['sort'] = 'weight';
     $this->attributes['editable'] = FALSE;
     $this->attributes['asc'] = TRUE;
-    $this->attributes['sort'] = 'time';
     $dirlist = new \Quanta\Common\DirList($this->env,  $this->getTarget(), 'records', $this->attributes, 'musician');
     $records = $dirlist->render();
     return $records;

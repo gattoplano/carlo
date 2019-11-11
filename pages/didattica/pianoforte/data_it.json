@@ -1,1 +1,1 @@
-{"permissions":{"node_add":"admin","node_edit":"admin","node_delete":"admin","node_view":"anonymous"},"teaser":"","author":"administrator","body":"","title":"Pianoforte (Jazz, Classico, Pop Rock)","thumbnail":null,"timestamp":1541094900,"status":"node-status-published"}
+{"permissions":{"node_add":"admin","node_edit":"admin","node_delete":"admin","node_view":"anonymous"},"teaser":null,"author":"administrator","body":"","title":"Pianoforte (Jazz, Classico, Pop Rock)","thumbnail":null,"timestamp":1541094900,"status":"node-status-published","weight":1}

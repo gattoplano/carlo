@@ -10,7 +10,6 @@ a {
 }
 
 /* HEADER */
-
 header {
     background: #000;
     position: relative;
@@ -29,19 +28,16 @@ header nav li a:hover {
 }
 
 /* 1st SIDE */
-
 #side-first {
     background: #fffacd;
 }
 
 /* 2nd SIDE */
-
 #side-second {
     background: #f4f8ff;
 }
 
 /* FOOTER */
-
 main {
     color: #eee;
     line-height: 1.5em;
@@ -53,11 +49,8 @@ main {
 }
 
 footer {
-    background-color: #004E95;
     color: #fff;
-    background-image: -webkit-linear-gradient(86deg, #004E95 50%, #000 50%);
     line-height: 1.7em;
-
 }
 footer a {
     color: #fff;
@@ -79,26 +72,31 @@ h1 {
     line-height: 1.3em;
 }
 
-#submenu {
-}
+
 #submenu li {
     border: 1px solid #ddd;
+    padding: 0;
 }
-#submenu a {
+
+#submenu ul li a {
     color: #fff;
     letter-spacing: 0.1em;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
 }
-#submenu li.list-selected {
+
+#submenu li.list-selected, #submenu li.list-selected-father {
     background: #fff;
 }
-#submenu li.list-selected a {
+#submenu li.list-selected a, #submenu li.list-selected-father a {
     color: #000;
 
 }
 .logo-title {
     color: white;
     font-family: "Cabin condensed";
-    background: #000;
     padding: 4px;
     text-transform: uppercase;
     font-size: 1.8em;
@@ -124,6 +122,7 @@ h1 {
     background: #ddd;
     padding: 10px;
     text-align: left;
+    height: 40px;
 }
 
 .admin-bar a {
@@ -198,19 +197,11 @@ header nav li a {
     }
 }
 
-
-body, header, footer, main, .logo-title {
+body {
     background:url("http://bg.siteorigin.com//image/generate?color=%23346cad&pattern=lightpaperfibers&blend=38&intensity=76.00&noise=0");
     margin: 0;
 }
 
-.layout-main {
-    margin: auto;
-    padding: 8px;
-}
-.logo {
-    width: 100%;
-}
-
-body {
+header {
+    background:url("http://bg.siteorigin.com/image/generate?color=%233c597a&pattern=felt&blend=38&intensity=76.00&noise=0") !important;
 }

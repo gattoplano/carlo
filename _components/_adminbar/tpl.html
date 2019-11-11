@@ -1,21 +1,32 @@
-[ADD|components=node_form,node_edit,file_form,weight_form|filter=lineage@pages|path@!contatti;!video|title=Aggiungi pagina in "[TITLE]"]
+<!--[ADD|components=node_form,node_edit,file_form,weight_form|filter=lineage@pages|path@!contatti;!video|title=Aggiungi pagina in "[TITLE]"]-->
 [EDIT|filter=path@!home;!immagini;!video|components=node_form,node_edit,file_form,weight_form|title=Modifica "[TITLE]"]
 [DELETE|filter=path@!home|title=Elimina "[TITLE]"]
 
+<!-- AREA PRIVATA -->
 [EDIT|filter=father@private|components=node_form,file_form|widget=single|title=Aggiungi o elimina Files...]
 
+<!-- GALLERIA -->
 [ADD|filter=path@immagini|components=node_form,file_form|widget=single|title=Aggiungi e Elimina Immagini]
 
-[ADD|components=node_form,node_edit,disco_form,weight_form|filter=path@dischi|title=Aggiungi Disco]
+<!-- DISCHI E TRACCE -->
+[ADD|widget=grouped|components=node_form,disco_form,weight_form|filter=path@dischi|title=Aggiungi Disco]
 [EDIT|components=node_form,node_edit,file_form,disco_form,weight_form|filter=father@dischi|title=Modifica Disco]
 [ADD|components=node_form,node_edit,file_form,weight_form|filter=father@dischi|title=Aggiungi Traccia]
 
+<!-- AUDIO -->
 [ADD|filter=path@audio|title=Aggiungi Audio]
 [EDIT|filter=father@audio|title=Modifica Audio]
 
+<!-- RECENSIONI -->
+[ADD|components=node_form,node_edit,disco_form,weight_form|filter=path@recensioni|title=Aggiungi Recensione]
+[EDIT|filter=father@recensioni|title=Modifica Recensione]
+
+<!-- VIDEO -->
 [ADD|components=node_form,node_edit,video_form|filter=path@video|title=Aggiungi Video]
 [EDIT|components=node_form,node_edit,video_form|filter=father@video|title=Modifica Video]
 
+<!-- HOME -->
 [EDIT|components=node_form,file_form|widget=single|filter=path@home|title=Modifica Immagine Principale]
 
+<!-- LOGIN -->
 [LOGIN]

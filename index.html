@@ -26,16 +26,26 @@
     </head>
 
     <!-- Body -->
-    <body class="grid grid-gap-0 [BODY_CLASSES]">
-    {VARIABLE|set=grid-start-lg-2 grid-span-lg-10:layout_main}
+    <body class="[BODY_CLASSES]">
+    {VARIABLE|set=grid-start-lg-3 grid-span-lg-8:layout_main}
     {VARIABLE|set=grid-start-lg-3 grid-span-lg-8 grid-start-xxl-5 grid-span-xxl-4:layout_small}
+    {VARIABLE|set=p-0 grid-span-12:list_sub_nodes}
+    {VARIABLE|set=grid-span-3 text-center p-0 align-self-center:list_sub_nodes_items}
+    <!-- Display messages (if any) -->
+    [MESSAGES]
     [CONTENT|class=admin-bar|filter=user_role@admin:_adminbar]
-        <!-- Display messages (if any) -->
-        [MESSAGES]
-        [HTML_TAG|grid=layout-main {VARIABLE:layout_main}:
-            [HEADER|class=align-self-start|id=header:_header][MAIN|id=grid-main][FOOTER|id=footer:_footer]
-        ]
+    [HEADER|class=align-self-start|id=header:_header]
+    [GRID:
+            [MAIN|id=grid-main|class={VARIABLE:layout_main}]
+            [FOOTER|id=footer|class={VARIABLE:layout_main} align-self-end:_footer]
+            ]
+    [JS|refresh|runlast]
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/inline/ckeditor.js"></script>
 
-        [JS|runlast]
+    <script>
+      InlineEditor.create(document.querySelector( '.inline-edit' ) ).catch( error => {
+        console.error( error );
+      } );
+    </script>
     </body>
 </html>

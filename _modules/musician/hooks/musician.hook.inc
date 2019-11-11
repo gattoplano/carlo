@@ -14,6 +14,7 @@ function musician_shadow_video_form(Environment $env, &$vars) {
   $vars['shadow']->addTab('Video', file_get_contents($env->getModulePath('musician') . '/tpl/video_form.inc'), 2);
 }
 
+
 /**
  * Implements hook_shadow_[FORM_ID].
  *
@@ -23,9 +24,10 @@ function musician_shadow_video_form(Environment $env, &$vars) {
  * @param $vars
  *   An array of variables.
  */
-function musician_shadow_weight_form(Environment $env, &$vars) {
-  $vars['shadow']->addTab('Peso', file_get_contents($env->getModulePath('musician') . '/tpl/weight_form.inc'), 2);
+function musician_shadow_disco_form(Environment $env, &$vars) {
+  $vars['shadow']->addTab('Video', file_get_contents($env->getModulePath('musician') . '/tpl/disco_form.inc'), 2);
 }
+
 /**
  * Implements hook_node_presave().
  *
@@ -38,8 +40,8 @@ function musician_shadow_weight_form(Environment $env, &$vars) {
 function musician_node_presave($env, $vars) {
   $musician_fields = array(
     'video',
-    'weight',
   );
+  // Cycle musician fields.
   foreach ($musician_fields as $field) {
     if (!empty($vars['data'][$field]) && $vars['data'][$field] != \Quanta\Qtags\FormItem::INPUT_EMPTY_VALUE) {
       $vars['node']->json->{$field} = $vars['data'][$field];
