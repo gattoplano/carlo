@@ -28,6 +28,20 @@ function musician_shadow_disco_form(Environment $env, &$vars) {
   $vars['shadow']->addTab('Video', file_get_contents($env->getModulePath('musician') . '/tpl/disco_form.inc'), 2);
 }
 
+
+/**
+ * Implements hook_shadow_[FORM_ID].
+ *
+ * @param Environment $env
+ *   The Environment.
+ *
+ * @param $vars
+ *   An array of variables.
+ */
+function musician_shadow_track_form(Environment $env, &$vars) {
+    $vars['shadow']->addTab('Traccia', file_get_contents($env->getModulePath('musician') . '/tpl/track_form.inc'), 2);
+}
+
 /**
  * Implements hook_node_presave().
  *

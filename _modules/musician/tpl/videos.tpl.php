@@ -7,7 +7,7 @@
 <h2>[TITLE:[LISTITEM]]</h2>
 [BODY:[LISTITEM]]
 
-[EDIT|components=node_form,node_edit,video_form|title=Modifica...:[LISTITEM]]
-[DELETE:[LISTITEM]]
+[EDIT|widget=single|components=node_form,video_form|class=button|title=Modifica...:[LISTITEM]]
+[DELETE|class=button|title=Elimina:[LISTITEM]]
 ]
 ]
