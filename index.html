@@ -22,6 +22,7 @@
             @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Sedgwick+Ave+Display|Walter+Turncoat');
         </style>
         <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|Julius+Sans+One|Sarala|Spinnaker" rel="stylesheet">
+        <script src="/modules/wysiwyg/assets/js/ckeditor.js?refresh=111"></script>
 
     </head>
 
@@ -40,12 +41,22 @@
             [FOOTER|id=footer|class={VARIABLE:layout_main} align-self-end:_footer]
             ]
     [JS|refresh|runlast]
-    <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/inline/ckeditor.js"></script>
+
 
     <script>
-      InlineEditor.create(document.querySelector( '.inline-edit' ) ).catch( error => {
-        console.error( error );
-      } );
-    </script>
+
+      $('.inline-edit').each(function() {
+          InlineEditor.create(document.querySelector("#" + $(this).attr('id')), {
+            alignment: {
+                options: [ 'center', 'right' ]
+            },
+            toolbar: [
+              'heading', '|', 'bulletedList', 'numberedList', 'alignment', 'undo', 'redo', 'link'
+            ]
+          }).catch(error => {console.error(error);});
+        });
+    </script>';
+
+
     </body>
 </html>
