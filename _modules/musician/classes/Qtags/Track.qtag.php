@@ -15,6 +15,6 @@ class Track extends Qtag {
   public function render() {
 
     $node = \Quanta\Common\NodeFactory::load($this->env, $this->getTarget());
-    return $node->getTitle();
+    return $node->getBody();
   }
 }
